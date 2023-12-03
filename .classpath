@@ -15,5 +15,6 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="lib" path="/home/mibar/eclipse-workspace/MyCrud/src/main/webapp/WEB-INF/lib/postgresql-42.6.0.jar"/>
 	<classpathentry kind="lib" path="/home/mibar/eclipse-workspace/MyCrud/src/main/webapp/WEB-INF/lib/gson-2.8.2.jar"/>
+	<classpathentry kind="lib" path="/home/mibar/eclipse-workspace/MyCrud/src/main/webapp/WEB-INF/lib/slf4j-api-1.7.9.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

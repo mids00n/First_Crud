@@ -9,6 +9,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.sql.DataSource;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import org.postgresql.ds.PGSimpleDataSource;
 
@@ -16,7 +18,7 @@ public class studentDAO {
 	 private static final String JDBC_URL = "jdbc:postgresql://localhost:5433/popa";
 	    private static final String USERNAME = "mibar";
 	    private static final String PASSWORD = "1111";
-
+	    private static final Logger logger = LoggerFactory.getLogger(studentDAO.class);
 	  
 	    public DataSource createDataSource() {
 	    	final String url =
@@ -126,7 +128,8 @@ public class studentDAO {
 	            int rowsAffected = statement.executeUpdate();
 	            return rowsAffected > 0;
 	        } catch (SQLException e) {
-	            e.printStackTrace(); 
+	        	 logger.error("Failed to delete student with id {}", studentId, e);
+	        
 	        }
 
 	        return false;
